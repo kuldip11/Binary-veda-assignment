@@ -9,14 +9,14 @@ const NaveBar = () => {
     const [state,setState] = useState("Sign up free")
     return (
         <div style={{display:"flex"}}>
-            <div style={{display:"flex"}}>
-                <img src={logo} alt="lodo" className="marvel" />
+            <div style={{display:"flex", width: "20%"}}>
+                <img src={logo} alt="lodo" className="marvel"/>
                 <h5>  | Devloper</h5>
             </div>
         <div style={{display:"flex",justifyContent:"flex-end",alignItems:"center",width:"100%"}}>
         <Router>
             <div className="nave">
-                <Select value="why Marvel" options={[{label:"Hello"},{label:"Hello"},{label:"Hello"}]} />
+                <Select value="why Marvel"  onMenuOpen={()=>{setState("select")}} />
                 <Link className={state==="Enterprice" ? "link cli" : "link"} onClick={()=>{setState("Enterprice")}}>
                     Enterprice
                 </Link>
